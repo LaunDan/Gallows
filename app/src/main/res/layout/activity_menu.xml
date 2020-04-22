@@ -27,6 +27,10 @@
                 android:layout_height="360dp"
                 app:srcCompat="@drawable/hangman" />
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
             <TableRow
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -37,8 +41,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/buttonshape"
-                    android:text="Button" />
+                    android:text="Play" />
             </TableRow>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
 
             <TableRow
                 android:layout_width="wrap_content"
@@ -50,8 +58,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/buttonshape"
-                    android:text="Button" />
+                    android:text="results" />
             </TableRow>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
 
             <TableRow
                 android:layout_width="wrap_content"
@@ -63,7 +75,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/buttonshape"
-                    android:text="Button" />
+                    android:text="end" />
             </TableRow>
 
         </LinearLayout>

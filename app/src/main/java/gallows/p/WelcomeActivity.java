@@ -29,16 +29,16 @@ public class WelcomeActivity extends AppCompatActivity {
                 | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
 
         ImageView imgvwSpsoa2 = findViewById(R.id.imageView2);
-        Animation animSpsoaLogo2 = AnimationUtils.loadAnimation(this, R.anim.weclome2_sc);
+        Animation animSpsoaLogo2 = AnimationUtils.loadAnimation(this, R.anim.welcome_sc);
         ImageView imgvwSpsoa1 = findViewById(R.id.imageView);
-        Animation animSpsoaLogo1 = AnimationUtils.loadAnimation(this, R.anim.welcome1_sc);
+        Animation animSpsoaLogo1 = AnimationUtils.loadAnimation(this, R.anim.welcome_sc2);
         imgvwSpsoa1.startAnimation(animSpsoaLogo1);
         imgvwSpsoa2.startAnimation(animSpsoaLogo2);
         Thread thrdWlcmscrnDelay = new Thread() {
             public void run() {
                 try {
                     sleep(4000);
-                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                    startActivity(new Intent(getApplicationContext(), MenuActivity.class));
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } finally {

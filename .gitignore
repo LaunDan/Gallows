@@ -24,3 +24,4 @@ app/src/androidTest/java/gallows/p/ExampleInstrumentedTest.java
 app/src/test/java/gallows/p/ExampleUnitTest.java
 gradle/wrapper/gradle-wrapper.jar
 gradle/wrapper/gradle-wrapper.properties
+app/src/main/ic_launcher1-playstore.png

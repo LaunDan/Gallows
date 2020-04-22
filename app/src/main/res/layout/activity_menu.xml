@@ -36,6 +36,7 @@
                     android:id="@+id/button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/buttonshape"
                     android:text="Button" />
             </TableRow>
 
@@ -48,6 +49,7 @@
                     android:id="@+id/button2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/buttonshape"
                     android:text="Button" />
             </TableRow>
 
@@ -60,6 +62,7 @@
                     android:id="@+id/button3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/buttonshape"
                     android:text="Button" />
             </TableRow>
 

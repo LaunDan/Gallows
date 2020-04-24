@@ -9,6 +9,16 @@
 
 
     <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="285dp"
+        android:layout_height="378dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/placeforgall"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+    <ImageView
         android:id="@+id/imageView3"
         android:layout_width="392dp"
         android:layout_height="145dp"
@@ -16,4 +26,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/gallows_headline1" />
+
+    <FrameLayout
+        android:layout_width="388dp"
+        android:layout_height="207dp"
+        android:layout_marginStart="3dp"
+
+        android:layout_marginBottom="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent">
+
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

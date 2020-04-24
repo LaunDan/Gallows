@@ -13,7 +13,6 @@
         android:layout_width="392dp"
         android:layout_height="145dp"
         android:layout_marginStart="3dp"
-        android:layout_marginTop="5dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/gallows_headline1" />

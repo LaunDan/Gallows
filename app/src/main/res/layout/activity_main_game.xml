@@ -31,11 +31,17 @@
         android:layout_width="388dp"
         android:layout_height="207dp"
         android:layout_marginStart="3dp"
-
         android:layout_marginBottom="3dp"
         app:layout_constraintBottom_toBottomOf="parent"
-
         app:layout_constraintStart_toStartOf="parent">
 
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom" />
     </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

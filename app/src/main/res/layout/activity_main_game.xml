@@ -141,7 +141,7 @@
                 android:inputType="text" />
 
             <Space
-                android:layout_width="20dp"
+                android:layout_width="16dp"
                 android:layout_height="match_parent" />
 
             <Button

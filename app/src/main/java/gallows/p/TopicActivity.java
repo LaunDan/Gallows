@@ -24,18 +24,6 @@ public class TopicActivity extends AppCompatActivity {
                 | View.SYSTEM_UI_FLAG_FULLSCREEN
                 | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
 
-        Thread thrdWlcmscrnDelay = new Thread() {
-            public void run() {
-                try {
-                    sleep(4000);
-                    startActivity(new Intent(getApplicationContext(), MainGameActivity.class));
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                } finally {
-                    finish();
-                }
-            }
-        };
-        thrdWlcmscrnDelay.start();
+
     }
 }

@@ -23,7 +23,20 @@ public class MenuActivity extends AppCompatActivity {
                 | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
                 | View.SYSTEM_UI_FLAG_FULLSCREEN
                 | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
-
-
     }
+
+        public void startPlay (View v){
+            Intent newActivity = new Intent(this, TopicActivity.class);
+            startActivity(newActivity);
+        }
+
+        public void printScore (View v){
+            Intent newActivity = new Intent(this, ShowScoreActivity.class);
+            startActivity(newActivity);
+        }
+
+        public void end (View v){
+            finish();
+        }
+
 }

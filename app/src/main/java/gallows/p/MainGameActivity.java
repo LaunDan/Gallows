@@ -9,6 +9,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainGameActivity extends AppCompatActivity {
     private View decorView;
+    private String word = "";
+    private int mistake = 0;
+
+    private int lenghtOfWord = 0;
+    private int amountOfExistence = 0;
+    private String plenght = "";
+
+    private int score = 10000;
+    private int multiplikator = 0;
+    private String suhadnute = "";
+    private String countedMistake = "";
+
+    int topic = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

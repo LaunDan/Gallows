@@ -19,8 +19,9 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="83dp">
+            android:layout_width="wrap_content"
+            android:layout_height="83dp"
+            android:layout_gravity="center_horizontal">
 
             <TextView
                 android:id="@+id/textView4"
@@ -30,8 +31,9 @@
         </TableRow>
 
         <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="66dp">
+            android:layout_width="wrap_content"
+            android:layout_height="66dp"
+            android:layout_gravity="center_horizontal">
 
             <TextView
                 android:id="@+id/textView5"
@@ -47,8 +49,9 @@
         </TableRow>
 
         <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="76dp">
+            android:layout_width="wrap_content"
+            android:layout_height="76dp"
+            android:layout_gravity="center_horizontal">
 
             <TextView
                 android:id="@+id/textView7"
@@ -66,20 +69,27 @@
         </TableRow>
 
         <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal">
 
             <Button
                 android:id="@+id/button5"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="Main menu"
+                android:background="@drawable/buttonshape"/>
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="64dp" />
 
             <Button
                 android:id="@+id/button7"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="Save score"
+                android:background="@drawable/buttonshape"/>
         </TableRow>
     </LinearLayout>
 

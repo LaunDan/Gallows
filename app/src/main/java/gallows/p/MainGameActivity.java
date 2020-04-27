@@ -60,7 +60,7 @@ public class MainGameActivity extends AppCompatActivity {
             fieldInfo = new String[]{"Czechia", "Slovakia", "Germany", "Poland", "Austria", "Australia", "England", "Holland", "China", "Japan", "Russia", "Vietnam", "Italy", "Canada", "Brazil", "India", "Greece", "Croatia", "France", "Ukraine", "Turkey", "Sweden", "Finland", "Switzerland", "Norway", "Spain"};
         }
         if (topic == 3) {
-            fieldInfo = new String[]{"klokan", "opice", "zebra", "lama", "slon", "hroch", "velbloud", "nosorožec", "bažant", "medvěd", "slepice", "morče", "ovce", "prase", "koza", "kráva", "kohout", "králík", "zajíc", "tygr", "vlk", "veverka", "žába", "tuleň", "ježek", "fredka", "křeček"};
+            fieldInfo = new String[]{"kangaroo", "monkey", "ribs", "lama", "elephant", "hippopotamus", "camel", "rhinoceros", "pheasant", "bear", "hen", "sheep", "pig", "goat", "cow", "rooster", "rabbit", "hare", "tiger", "wolf", "squirrel", "frog", "seal", "hedgehog", "ferret", "hamster", "horse", "dog", "cat", "giraffe", "fox", "snake"};
         }
         if (topic == 4) {
             fieldInfo = new String[]{"audi", "bmw", "citroen", "dacia", "fiat", "ferrari", "kia", "honda", "škoda", "hyundai", "chevrolet", "jaguar", "jeep", "mazda", "mercedes", "mitsubishi", "nissan", "opel", "peugeot", "porsche", "renault", "rover", "saab", "seat", "subaru", "suzuki", "toyota", "volkswagen", "volvo", "bentley", "bugatti", "cadillac", "lada", "dodge", "infinity", "lancia", "lexus", "maybach", "pagani", "proton", "tatra", "trabant", "volha", "zastava"};

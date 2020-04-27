@@ -46,70 +46,70 @@
             android:gravity="center">
 
             <TextView
-                android:id="@+id/textView12"
+                android:id="@+id/tvp1"
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:text="_"
                 android:textSize="50dp" />
 
             <TextView
-                android:id="@+id/textView13"
+                android:id="@+id/tvp2"
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:text="_"
                 android:textSize="50dp" />
 
             <TextView
-                android:id="@+id/textView14"
+                android:id="@+id/tvp3"
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:text="_"
                 android:textSize="50dp" />
 
             <TextView
-                android:id="@+id/textView15"
+                android:id="@+id/tvp4"
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:text="_"
                 android:textSize="50dp" />
 
             <TextView
-                android:id="@+id/textView16"
+                android:id="@+id/tvp5"
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:text="_"
                 android:textSize="50dp" />
 
             <TextView
-                android:id="@+id/textView17"
+                android:id="@+id/tvp6"
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:text="_"
                 android:textSize="50dp" />
 
             <TextView
-                android:id="@+id/textView18"
+                android:id="@+id/tvp7"
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:text="_"
                 android:textSize="50dp" />
 
             <TextView
-                android:id="@+id/textView19"
+                android:id="@+id/tvp8"
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:text="_"
                 android:textSize="50dp" />
 
             <TextView
-                android:id="@+id/textView20"
+                android:id="@+id/tvp9"
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:text="_"
                 android:textSize="50dp" />
 
             <TextView
-                android:id="@+id/textView21"
+                android:id="@+id/tvp10"
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:text="_"
@@ -134,7 +134,7 @@
                 android:layout_height="match_parent" />
 
             <EditText
-                android:id="@+id/plain_text_input"
+                android:id="@+id/entered"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|center_horizontal"

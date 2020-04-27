@@ -57,7 +57,7 @@ public class MainGameActivity extends AppCompatActivity {
             fieldInfo = new String[]{"Prague", "Bratislava", "Washington", "Hongkong", "Tokyo", "Berlin", "Warsaw", "Vienna", "Paris", "Brussels", "Minsk", "Brasilia", "Sofia", "Peking", "Copenhagen", "Helsinki", "Dublin", "Roma", "Jerusalem", "Ottawa", "Havana", "Luxembourg", "Budapest", "Amsterdam", "Oslo", "Lisbon", "Moscow", "Athens", "London", "Madrid", "Bangkok"};
         }
         if (topic == 2) {
-            fieldInfo = new String[]{"Czechia", "Slovakia", "Germany", "plzeň", "liberec", "olomouc", "pardubice", "havířov", "zlín", "kladno", "most", "karviná", "opava", "bruntál", "jihlava", "teplice", "kolín", "šumperk", "chomutov", "přerov", "prostějov", "třebíč", "tábor", "třinec", "znojmo", "příbram", "cheb", "orlová", "trutnov", "písek", "vsetín", "hodonín", "sokolov", "bohumín", "beroun", "jičín", "benešov"};
+            fieldInfo = new String[]{"Czechia", "Slovakia", "Germany", "Poland", "Austria", "Australia", "England", "Holland", "China", "Japan", "Russia", "Vietnam", "Italy", "Canada", "Brazil", "India", "Greece", "Croatia", "France", "Ukraine", "Turkey", "Sweden", "Finland", "Switzerland", "Norway", "Spain"};
         }
         if (topic == 3) {
             fieldInfo = new String[]{"klokan", "opice", "zebra", "lama", "slon", "hroch", "velbloud", "nosorožec", "bažant", "medvěd", "slepice", "morče", "ovce", "prase", "koza", "kráva", "kohout", "králík", "zajíc", "tygr", "vlk", "veverka", "žába", "tuleň", "ježek", "fredka", "křeček"};

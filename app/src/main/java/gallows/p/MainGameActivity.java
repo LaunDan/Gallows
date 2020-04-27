@@ -59,13 +59,13 @@ public class MainGameActivity extends AppCompatActivity {
         int lenghtInfo = 0;
 
         if (topic == 1) {
-            fieldInfo = new String[]{"Prague", "Bratislava", "Washington", "Hongkong", "Tokyo", "Berlin", "Warsaw", "Vienna", "Paris", "Brussels", "Minsk", "Brasilia", "Sofia", "Peking", "Copenhagen", "Helsinki", "Dublin", "Roma", "Jerusalem", "Ottawa", "Havana", "Luxembourg", "Budapest", "Amsterdam", "Oslo", "Lisbon", "Moscow", "Athens", "London", "Madrid", "Bangkok"};
+            fieldInfo = new String[]{"Prague", "Washington", "Bratislava", "Hongkong", "Tokyo", "Berlin", "Warsaw", "Vienna", "Paris", "Brussels", "Minsk", "Brasilia", "Sofia", "Peking", "Copenhagen", "Helsinki", "Dublin", "Roma", "Jerusalem", "Ottawa", "Havana", "Luxembourg", "Budapest", "Amsterdam", "Oslo", "Lisbon", "Moscow", "Athens", "London", "Madrid", "Bangkok"};
         }
         if (topic == 2) {
-            fieldInfo = new String[]{"Czechia", "Slovakia", "Germany", "Poland", "Austria", "Australia", "England", "Holland", "China", "Japan", "Russia", "Vietnam", "Italy", "Canada", "Brazil", "India", "Greece", "Croatia", "France", "Ukraine", "Turkey", "Sweden", "Finland", "Switzerland", "Norway", "Spain"};
+            fieldInfo = new String[]{"Czechia", "Slovakia", "Germany", "Poland", "Austria", "Australia", "England", "Holland", "China", "Japan", "Russia", "Vietnam", "Italy", "Canada", "Brazil", "India", "Greece", "Croatia", "France", "Ukraine", "Turkey", "Sweden", "Finland", "Norway", "Spain"};
         }
         if (topic == 3) {
-            fieldInfo = new String[]{"kangaroo", "monkey", "ribs", "lama", "elephant", "hippopotamus", "camel", "rhinoceros", "pheasant", "bear", "hen", "sheep", "pig", "goat", "cow", "rooster", "rabbit", "hare", "tiger", "wolf", "squirrel", "frog", "seal", "hedgehog", "ferret", "hamster", "horse", "dog", "cat", "giraffe", "fox", "snake"};
+            fieldInfo = new String[]{"kangaroo", "monkey", "ribs", "lama", "elephant", "camel", "rhinoceros", "pheasant", "bear", "hen", "sheep", "pig", "goat", "cow", "rooster", "rabbit", "hare", "tiger", "wolf", "squirrel", "frog", "seal", "hedgehog", "ferret", "hamster", "horse", "dog", "cat", "giraffe", "fox", "snake"};
         }
         if (topic == 4) {
             fieldInfo = new String[]{"audi", "bmw", "citroen", "dacia", "fiat", "ferrari", "kia", "honda", "škoda", "hyundai", "chevrolet", "jaguar", "jeep", "mazda", "mercedes", "mitsubishi", "nissan", "opel", "peugeot", "porsche", "renault", "rover", "saab", "seat", "subaru", "suzuki", "toyota", "volkswagen", "volvo", "bentley", "bugatti", "cadillac", "lada", "dodge", "infinity", "lancia", "lexus", "maybach", "pagani", "proton", "tatra"};
@@ -76,7 +76,7 @@ public class MainGameActivity extends AppCompatActivity {
         word = fieldInfo[losInfo];
     }
 
-    private void edit(String guessedWord){
+    private void edit(String chosenWord){
         TextView[] letters = new TextView[10];
         letters[0] = findViewById(R.id.tvp1);
         letters[1] = findViewById(R.id.tvp2);
@@ -89,7 +89,7 @@ public class MainGameActivity extends AppCompatActivity {
         letters[8] = findViewById(R.id.tvp9);
         letters[9] = findViewById(R.id.tvp10);
 
-        int leng = guessedWord.length();
+        int leng = chosenWord.length();
 
         for (int i = leng; i < 10; i++) {
             letters[i].setVisibility(View.GONE);

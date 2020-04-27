@@ -17,6 +17,7 @@ import java.util.Random;
 
 public class MainGameActivity extends AppCompatActivity {
     private View decorView;
+
     private String word = "";
     private int mistakes = 0;
 

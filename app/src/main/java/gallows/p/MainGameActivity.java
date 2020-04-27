@@ -5,7 +5,10 @@ import android.content.pm.ActivityInfo;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -69,6 +72,79 @@ public class MainGameActivity extends AppCompatActivity {
         Random ranInfo = new Random();
         int losInfo = ranInfo.nextInt(lenghtInfo - 1);
         word = fieldInfo[losInfo];
+    }
+
+    private void edit(String guessedWord){
+        TextView[] letters = new TextView[10];
+        letters[0] = findViewById(R.id.tvp1);
+        letters[1] = findViewById(R.id.tvp2);
+        letters[2] = findViewById(R.id.tvp3);
+        letters[3] = findViewById(R.id.tvp4);
+        letters[4] = findViewById(R.id.tvp5);
+        letters[5] = findViewById(R.id.tvp6);
+        letters[6] = findViewById(R.id.tvp7);
+        letters[7] = findViewById(R.id.tvp8);
+        letters[8] = findViewById(R.id.tvp9);
+        letters[9] = findViewById(R.id.tvp10);
+
+        int leng = guessedWord.length();
+
+        for (int i = leng; i < 10; i++) {
+            letters[i].setVisibility(View.GONE);
+        }
+    }
+
+    public void insert(View v) {
+        EditText edte = findViewById(R.id.entered);
+        String entered = edte.getText().toString().toLowerCase();
+        if (entered.length() >= 1) {
+            char enteredP = entered.charAt(0);
+            edte.setText("");
+            if ((enteredP >= 97 && enteredP <= 122) || (enteredP == 283) || (enteredP == 353) || (enteredP == 357) || (enteredP == 269) || (enteredP == 345) || (enteredP == 382) || (enteredP == 253) || (enteredP == 225) || (enteredP == 237) || (enteredP == 233) || (enteredP == 367) || (enteredP == 250) || (enteredP == 243)) {
+
+                for (int i = 0; i < word.length(); i++) {
+                    if (word.charAt(i) == enteredP) {
+                        amountOfExistence++;
+                        writeCorrect(enteredP, i);
+                        scorePlus(enteredP);
+                    }
+                }
+
+                if (plenght.indexOf(enteredP) == -1) {
+                    lenghtOfWord += amountOfExistence;
+                    plenght += enteredP;
+                }
+
+                if (lenghtOfWord == word.length()) {
+                    won();
+                }
+                if (amountOfExistence == 0) {
+                    writeWrong(enteredP);
+                    scoreMinus(enteredP);
+                }
+            } else {
+                Toast.makeText(getApplicationContext(), "Entered wrong letter..", Toast.LENGTH_LONG).show();
+            }
+        }
+
+        amountOfExistence = 0;
+    }
+
+    private void writeCorrect(char letter, int position) {
+        TextView[] letters = new TextView[10];
+        letters[0] = findViewById(R.id.tvp1);
+        letters[1] = findViewById(R.id.tvp2);
+        letters[2] = findViewById(R.id.tvp3);
+        letters[3] = findViewById(R.id.tvp4);
+        letters[4] = findViewById(R.id.tvp5);
+        letters[5] = findViewById(R.id.tvp6);
+        letters[6] = findViewById(R.id.tvp7);
+        letters[7] = findViewById(R.id.tvp8);
+        letters[8] = findViewById(R.id.tvp9);
+        letters[9] = findViewById(R.id.tvp10);
+
+        letters[position].setText(String.valueOf(letter));
+
     }
 }
 

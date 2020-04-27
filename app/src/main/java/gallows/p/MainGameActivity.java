@@ -210,6 +210,14 @@ public class MainGameActivity extends AppCompatActivity {
         finish();
     }
 
-    
+
+    private void won() {
+        Intent endGame = new Intent(this, EndGameActivity.class);
+        endGame.putExtra("WIN_LOSS", 1);
+        endGame.putExtra("ID_VARIABLE", score);
+        endGame.putExtra("WORD", word);
+        startActivity(endGame);
+        finish();
+    }
 }
 

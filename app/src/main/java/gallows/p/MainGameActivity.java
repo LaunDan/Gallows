@@ -9,6 +9,8 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Random;
+
 public class MainGameActivity extends AppCompatActivity {
     private View decorView;
     private String word = "";
@@ -39,28 +41,34 @@ public class MainGameActivity extends AppCompatActivity {
                 | View.SYSTEM_UI_FLAG_FULLSCREEN
                 | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
 
-        AnimationDrawable animace = new AnimationDrawable();
-        ImageView napis = findViewById(R.id.imageView4);
 
-        animace.addFrame(getResources().getDrawable(R.drawable.napis1), 1000);
-        animace.addFrame(getResources().getDrawable(R.drawable.napis2), 1000);
-        animace.addFrame(getResources().getDrawable(R.drawable.napis3), 1000);
-        animace.addFrame(getResources().getDrawable(R.drawable.napis4), 1000);
-        animace.addFrame(getResources().getDrawable(R.drawable.napis5), 1000);
-        animace.addFrame(getResources().getDrawable(R.drawable.napis6), 1000);
-        animace.addFrame(getResources().getDrawable(R.drawable.napis7), 1000);
-        animace.addFrame(getResources().getDrawable(R.drawable.napis8), 1000);
-        animace.addFrame(getResources().getDrawable(R.drawable.napis9), 1000);
-        animace.addFrame(getResources().getDrawable(R.drawable.napis10), 1000);
 
-        napis.setBackgroundDrawable(animace);
+        topic = getIntent().getIntExtra("ChosenMethod", 1);
 
-        animace.start();
-
-        topic = getIntent().getIntExtra("Chosen method", 1);
-
-        choseword();
+        choseWord();
         edit(word);
+    }
+
+    private void choseWord() {
+        String[] fieldInfo = new String[100];
+        int lenghtInfo = 0;
+
+        if (topic == 1) {
+            fieldInfo = new String[]{"síť", "crack", "hacker", "firewall", "databáze", "počítač", "notebook", "klávesnice", "myš", "ram", "procesor", "java", "android", "windows", "linux", "ubuntu", "lubuntu", "algoritmus", "program", "bios", "hardware", "software", "monitor", "lan", "man", "wan", "ethernet", "proxy", "server", "chrome", "opera", "safari", "komprese", "dekomprese", "informace", "diagram", "kódování", "zdroj", "patice", "frekvence", "sektor", "odezva", "kontrast", "jas", "rozlišení", "skener", "tablet", "projektor", "cyklus", "podmínka", "pascal", "apple", "mac", "procedura"};
+        }
+        if (topic == 2) {
+            fieldInfo = new String[]{"praha", "brno", "ostrava", "plzeň", "liberec", "olomouc", "pardubice", "havířov", "zlín", "kladno", "most", "karviná", "opava", "bruntál", "jihlava", "teplice", "kolín", "šumperk", "chomutov", "přerov", "prostějov", "třebíč", "tábor", "třinec", "znojmo", "příbram", "cheb", "orlová", "trutnov", "písek", "vsetín", "hodonín", "sokolov", "bohumín", "beroun", "jičín", "benešov"};
+        }
+        if (topic == 3) {
+            fieldInfo = new String[]{"klokan", "opice", "zebra", "lama", "slon", "hroch", "velbloud", "nosorožec", "bažant", "medvěd", "slepice", "morče", "ovce", "prase", "koza", "kráva", "kohout", "králík", "zajíc", "tygr", "vlk", "veverka", "žába", "tuleň", "ježek", "fredka", "křeček"};
+        }
+        if (topic == 4) {
+            fieldInfo = new String[]{"audi", "bmw", "citroen", "dacia", "fiat", "ferrari", "kia", "honda", "škoda", "hyundai", "chevrolet", "jaguar", "jeep", "mazda", "mercedes", "mitsubishi", "nissan", "opel", "peugeot", "porsche", "renault", "rover", "saab", "seat", "subaru", "suzuki", "toyota", "volkswagen", "volvo", "bentley", "bugatti", "cadillac", "lada", "dodge", "infinity", "lancia", "lexus", "maybach", "pagani", "proton", "tatra", "trabant", "volha", "zastava"};
+        }
+        lenghtInfo = fieldInfo.length;
+        Random ranInfo = new Random();
+        int losInfo = ranInfo.nextInt(lenghtInfo - 1);
+        word = fieldInfo[losInfo];
     }
 }
 

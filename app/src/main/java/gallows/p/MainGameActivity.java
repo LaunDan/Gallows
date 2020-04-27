@@ -3,6 +3,7 @@ package gallows.p;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.drawable.AnimationDrawable;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -177,6 +178,16 @@ public class MainGameActivity extends AppCompatActivity {
                 endOfGame();
             }
 
+        }
+    }
+
+    private void scorePlus(char letter) {
+        if (suhadnute.indexOf(letter) == -1) {
+            MediaPlayer mp = MediaPlayer.create(this, R.raw.sucpis);
+            mp.start();
+            suhadnute += letter;
+            multiplikator++;
+            score += (500 * multiplikator);
         }
     }
 }

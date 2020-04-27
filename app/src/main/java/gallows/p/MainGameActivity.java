@@ -17,7 +17,7 @@ import java.util.Random;
 public class MainGameActivity extends AppCompatActivity {
     private View decorView;
     private String word = "";
-    private int mistake = 0;
+    private int mistakes = 0;
 
     private int lenghtOfWord = 0;
     private int amountOfExistence = 0;
@@ -145,6 +145,39 @@ public class MainGameActivity extends AppCompatActivity {
 
         letters[position].setText(String.valueOf(letter));
 
+    }
+
+    private void writeWrong(char letter) {
+        ImageView place = findViewById(R.id.placeForGallows);
+        TextView wrong = findViewById(R.id.mistakes);
+
+        String mistake = wrong.getText().toString();
+
+        if (mistake.indexOf(letter) == -1) {
+            mistakes++;
+            wrong.append(String.valueOf(letter));
+
+            if (mistakes == 1) {
+                place.setImageResource(R.drawable.step2);
+            } else if (mistakes == 2) {
+                place.setImageResource(R.drawable.step3);
+            } else if (mistakes == 3) {
+                place.setImageResource(R.drawable.step4);
+            } else if (mistakes == 4) {
+                place.setImageResource(R.drawable.step5);
+            } else if (mistakes == 5) {
+                place.setImageResource(R.drawable.step6);
+            } else if (mistakes == 6) {
+                place.setImageResource(R.drawable.step7);
+            } else if (mistakes == 7) {
+                place.setImageResource(R.drawable.step8);
+            } else if (mistakes == 8) {
+                place.setImageResource(R.drawable.step9);
+            } else if (mistakes == 9) {
+                endOfGame();
+            }
+
+        }
     }
 }
 

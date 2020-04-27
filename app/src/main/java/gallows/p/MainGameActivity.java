@@ -54,10 +54,10 @@ public class MainGameActivity extends AppCompatActivity {
         int lenghtInfo = 0;
 
         if (topic == 1) {
-            fieldInfo = new String[]{"síť", "crack", "hacker", "firewall", "databáze", "počítač", "notebook", "klávesnice", "myš", "ram", "procesor", "java", "android", "windows", "linux", "ubuntu", "lubuntu", "algoritmus", "program", "bios", "hardware", "software", "monitor", "lan", "man", "wan", "ethernet", "proxy", "server", "chrome", "opera", "safari", "komprese", "dekomprese", "informace", "diagram", "kódování", "zdroj", "patice", "frekvence", "sektor", "odezva", "kontrast", "jas", "rozlišení", "skener", "tablet", "projektor", "cyklus", "podmínka", "pascal", "apple", "mac", "procedura"};
+            fieldInfo = new String[]{"Prague", "Bratislava", "Washington", "Hongkong", "Tokyo", "Berlin", "Warsaw", "Vienna", "Paris", "Brussels", "Minsk", "Brasilia", "Sofia", "Peking", "Copenhagen", "Helsinki", "Dublin", "Roma", "Jerusalem", "Ottawa", "Havana", "Luxembourg", "Budapest", "Amsterdam", "Oslo", "Lisbon", "Moscow", "Athens", "London", "Madrid", "Bangkok"};
         }
         if (topic == 2) {
-            fieldInfo = new String[]{"praha", "brno", "ostrava", "plzeň", "liberec", "olomouc", "pardubice", "havířov", "zlín", "kladno", "most", "karviná", "opava", "bruntál", "jihlava", "teplice", "kolín", "šumperk", "chomutov", "přerov", "prostějov", "třebíč", "tábor", "třinec", "znojmo", "příbram", "cheb", "orlová", "trutnov", "písek", "vsetín", "hodonín", "sokolov", "bohumín", "beroun", "jičín", "benešov"};
+            fieldInfo = new String[]{"Czechia", "Slovakia", "Germany", "plzeň", "liberec", "olomouc", "pardubice", "havířov", "zlín", "kladno", "most", "karviná", "opava", "bruntál", "jihlava", "teplice", "kolín", "šumperk", "chomutov", "přerov", "prostějov", "třebíč", "tábor", "třinec", "znojmo", "příbram", "cheb", "orlová", "trutnov", "písek", "vsetín", "hodonín", "sokolov", "bohumín", "beroun", "jičín", "benešov"};
         }
         if (topic == 3) {
             fieldInfo = new String[]{"klokan", "opice", "zebra", "lama", "slon", "hroch", "velbloud", "nosorožec", "bažant", "medvěd", "slepice", "morče", "ovce", "prase", "koza", "kráva", "kohout", "králík", "zajíc", "tygr", "vlk", "veverka", "žába", "tuleň", "ježek", "fredka", "křeček"};

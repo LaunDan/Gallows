@@ -190,5 +190,17 @@ public class MainGameActivity extends AppCompatActivity {
             score += (500 * multiplikator);
         }
     }
+
+    private void scoreMinus(char letter) {
+        if (countedMistake.indexOf(letter) == -1) {
+            MediaPlayer mp = MediaPlayer.create(this, R.raw.failpis);
+            mp.start();
+            countedMistake += letter;
+            score -= 1000;
+            multiplikator = 0;
+        }
+    }
+
+    
 }
 

@@ -14,10 +14,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import static java.lang.Thread.sleep;
 
 
-public class EndGameActivity extends Activity {
+public class EndGameActivity extends AppCompatActivity {
 
     int endScore;
     int winOrLose;
@@ -80,7 +82,6 @@ public class EndGameActivity extends Activity {
             }
 
 
-
         } else if (winOrLose == 1) {
             MediaPlayer mp = MediaPlayer.create(this, R.raw.wingame);
             mp.start();
@@ -118,7 +119,7 @@ public class EndGameActivity extends Activity {
     }
 
     private void showScore() {
-        TextView phs = findViewById(R.id.word);
+        TextView phs = findViewById(R.id.wantedWordTV);
         phs.setText(wantedWord);
 
         TextView tws = findViewById(R.id.score);

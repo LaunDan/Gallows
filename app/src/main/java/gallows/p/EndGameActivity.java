@@ -26,6 +26,7 @@ public class EndGameActivity extends AppCompatActivity {
     String nameOfPlayer = "";
     String wantedWord = "";
     boolean sound = true;
+    int animLoad = 0;
 
     private View decorView;
 
@@ -51,43 +52,50 @@ public class EndGameActivity extends AppCompatActivity {
 
         showScore();
         loadAnimation();
-    }
+        loadAnimation();
+        loadAnimation();
 
+    }
+//TODO set animation to print one by one
     private void loadAnimation() {
 
         ImageView pcs = findViewById(R.id.endPlace);
         if (winOrLose == 0) {
-            if (sound){
-                MediaPlayer mp = MediaPlayer.create(this, R.raw.loosegame);
-                mp.start();
-            }
-            pcs.setImageResource(R.drawable.step10);
-            try {
-                sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+            if (animLoad == 0) {
+                if (sound) {
+                    MediaPlayer mp = MediaPlayer.create(this, R.raw.loosegame);
+                    mp.start();
+                }
+                pcs.setImageResource(R.drawable.step10);
+                animLoad++;
+                try {
+                    sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            } else if (animLoad == 1) {
+                pcs.setImageResource(R.drawable.step11);
+                animLoad++;
+                try {
+                    sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            } else if (animLoad == 2) {
+                animLoad++;
+                pcs.setImageResource(R.drawable.step12);
+                try {
+                    sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
 
-            pcs.setImageResource(R.drawable.step11);
-            try {
-                sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
 
-            pcs.setImageResource(R.drawable.step12);
-            try {
-                sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
 
 
         } else if (winOrLose == 1) {
-            if (sound) {
-                MediaPlayer mp = MediaPlayer.create(this, R.raw.wingame);
-                mp.start();
-            }
+
             pcs.setImageResource(R.drawable.won1);
             try {
                 sleep(1000);
@@ -107,6 +115,10 @@ public class EndGameActivity extends AppCompatActivity {
                 sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
+            }
+            if (sound) {
+                MediaPlayer mp = MediaPlayer.create(this, R.raw.wingame);
+                mp.start();
             }
 
         } else {

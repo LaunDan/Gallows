@@ -168,6 +168,8 @@ public class EndGameActivity extends Activity {
         }
     }
 
-    
+    public void end(View v) {
+        finish();
+    }
 
 }

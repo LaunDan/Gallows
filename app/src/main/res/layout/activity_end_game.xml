@@ -119,6 +119,7 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/buttonshape"
+                android:onClick="end"
                 android:text="Main menu" />
 
             <Space
@@ -130,6 +131,7 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/buttonshape"
+                android:onClick="saveScore"
                 android:text="Save score" />
         </TableRow>
     </LinearLayout>

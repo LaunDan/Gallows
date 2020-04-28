@@ -1,12 +1,17 @@
 package gallows.p;
 
+import android.app.Activity;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 
-import androidx.appcompat.app.AppCompatActivity;
 
-public class EndGameActivity extends AppCompatActivity {
+public class EndGameActivity extends Activity {
+
+    int endScore;
+    int winOrLose;
+    String nameOfPlayer = "";
+    String wantedWord = "";
 
     private View decorView;
 
@@ -23,5 +28,15 @@ public class EndGameActivity extends AppCompatActivity {
                 | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
                 | View.SYSTEM_UI_FLAG_FULLSCREEN
                 | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
+
+        endScore = getIntent().getIntExtra("ID_VARIABLE", 0);
+        wantedWord = getIntent().getStringExtra("WORD").toUpperCase();
+        winOrLose = getIntent().getIntExtra("WIN_LOSS", 2);
+
+        zobrazScore();
+        nactiAnimaci();
     }
+
+    
+
 }

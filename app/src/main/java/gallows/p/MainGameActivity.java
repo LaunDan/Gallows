@@ -218,6 +218,7 @@ public class MainGameActivity extends AppCompatActivity {
         endGame.putExtra("WIN_LOSS", 0);
         endGame.putExtra("ID_VARIABLE", score);
         endGame.putExtra("WORD", word);
+        endGame.putExtra("SOUND", sound);
         startActivity(endGame);
         finish();
     }
@@ -228,6 +229,7 @@ public class MainGameActivity extends AppCompatActivity {
         endGame.putExtra("WIN_LOSS", 1);
         endGame.putExtra("ID_VARIABLE", score);
         endGame.putExtra("WORD", word);
+        endGame.putExtra("SOUND", sound);
         startActivity(endGame);
         finish();
     }

@@ -1,6 +1,8 @@
 package gallows.p;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
@@ -31,5 +33,30 @@ public class ShowScoreActivity extends Activity {
         String result = preferences.getString("RESULTS", "");
 
         textview.setText(result);
+    }
+
+    public void deleteOfMemory(View v) {
+        AlertDialog.Builder nasDialog = new AlertDialog.Builder(this);
+        nasDialog.setCancelable(true);
+        nasDialog.setMessage("Are you sure you want to delete all results?");
+        nasDialog.setPositiveButton("Yes",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        SharedPreferences preferences = getSharedPreferences("RESULTS", MODE_PRIVATE);
+                        SharedPreferences.Editor preeditor = preferences.edit();
+                        preeditor.putString("RESULTS", "");
+                        preeditor.apply();
+                        finish();
+                    }
+                });
+        nasDialog.setNegativeButton("No",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+
+        AlertDialog startDialog = nasDialog.create();
+        startDialog.show();
     }
 }

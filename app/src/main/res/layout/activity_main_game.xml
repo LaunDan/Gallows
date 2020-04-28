@@ -10,22 +10,25 @@
 
     <ImageView
         android:id="@+id/placeForGallows"
-        android:layout_width="285dp"
-        android:layout_height="378dp"
-        android:layout_marginTop="110dp"
+        android:layout_width="260dp"
+        android:layout_height="280dp"
+        android:layout_marginTop="190dp"
         android:background="@drawable/step1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="352dp"
         android:layout_height="118dp"
 
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
 
+
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/gallows_headline1" />
 
@@ -43,12 +46,11 @@
     <FrameLayout
         android:layout_width="390dp"
         android:layout_height="142dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="35dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/placeForGallows"
-        >
+        app:layout_constraintTop_toBottomOf="@+id/placeForGallows">
 
         <TableRow
             android:layout_width="wrap_content"
@@ -160,9 +162,33 @@
                 android:layout_width="156dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:onClick="insert"
                 android:background="@drawable/buttonshape"
+                android:onClick="insert"
                 android:text="Try" />
         </TableRow>
     </FrameLayout>
+
+    <Button
+        android:id="@+id/soundOn"
+        android:layout_width="62dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:onClick="soundSetterOn"
+        android:background="@android:drawable/ic_lock_silent_mode_off"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/soundOff"
+        android:layout_width="63dp"
+        android:layout_height="46dp"
+        android:onClick="soundSetterOff"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@android:drawable/ic_lock_silent_mode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,6 +7,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import static java.lang.Thread.sleep;
@@ -110,6 +111,14 @@ public class EndGameActivity extends Activity {
         } else {
             Toast.makeText(getApplicationContext(), "Opss, sorry somewhere is error", Toast.LENGTH_LONG).show();
         }
+    }
+
+    private void showScore() {
+        TextView phs = findViewById(R.id.word);
+        phs.setText(wantedWord);
+
+        TextView tws = findViewById(R.id.score);
+        tws.setText(String.valueOf(endScore));
     }
 
 }

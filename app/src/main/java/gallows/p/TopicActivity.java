@@ -40,13 +40,13 @@ public class TopicActivity extends AppCompatActivity {
         String chosenTopic = choosenRadio.getText().toString();
         Toast.makeText(getApplicationContext(), "Chosen topic: " + chosenTopic, Toast.LENGTH_LONG).show();
 
-        if (chosenTopic.equals(" Towns")) met = 1;
-        if (chosenTopic.equals(" States")) met = 2;
-        if (chosenTopic.equals(" Animals")) met = 3;
-        if (chosenTopic.equals(" Cars")) met = 4;
+        if (chosenTopic.equals("Towns")) met = 1;
+        if (chosenTopic.equals("States")) met = 2;
+        if (chosenTopic.equals("Animals")) met = 3;
+        if (chosenTopic.equals("Cars")) met = 4;
 
         Intent inte = new Intent(this, MainGameActivity.class);
-        inte.putExtra("ChosenMethod", met);
+        inte.putExtra("CHOSENMETHOD", met);
         startActivity(inte);
         finish();
     }

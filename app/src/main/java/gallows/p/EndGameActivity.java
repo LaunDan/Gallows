@@ -2,8 +2,14 @@ package gallows.p;
 
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
+import android.graphics.drawable.AnimationDrawable;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.Toast;
+
+import static java.lang.Thread.sleep;
 
 
 public class EndGameActivity extends Activity {
@@ -33,10 +39,59 @@ public class EndGameActivity extends Activity {
         wantedWord = getIntent().getStringExtra("WORD").toUpperCase();
         winOrLose = getIntent().getIntExtra("WIN_LOSS", 2);
 
-        zobrazScore();
-        nactiAnimaci();
+        showScore();
+        loadAnimation();
     }
 
-    
+    private void loadAnimation() {
+        AnimationDrawable anim = new AnimationDrawable();
+        ImageView pcs = findViewById(R.id.endPlace);
+        if (winOrLose == 0) {
+            MediaPlayer mp = MediaPlayer.create(this, R.raw.loosegame);
+            mp.start();
+            pcs.setImageResource(R.drawable.step10);
+            try {
+                sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } finally {
+                finish();
+            }
+            pcs.setImageResource(R.drawable.step11);
+            try {
+                sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } finally {
+                finish();
+            }
+            pcs.setImageResource(R.drawable.step12);
+            try {
+                sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } finally {
+                finish();
+            }
+
+
+
+        } else if (vyhraNeboProhra == 1) {
+            MediaPlayer mp = MediaPlayer.create(this, R.raw.wingame);
+            mp.start();
+
+            anim.addFrame(getResources().getDrawable(R.drawable.v1), 1000);
+            anim.addFrame(getResources().getDrawable(R.drawable.v2), 1000);
+            anim.addFrame(getResources().getDrawable(R.drawable.v3), 1000);
+            anim.addFrame(getResources().getDrawable(R.drawable.v4), 1000);
+            anim.addFrame(getResources().getDrawable(R.drawable.v5), 1000);
+            anim.addFrame(getResources().getDrawable(R.drawable.v6), 1000);
+            anim.addFrame(getResources().getDrawable(R.drawable.v7), 1000);
+            obr.setBackgroundDrawable(anim);
+            anim.start();
+        } else {
+            Toast.makeText(getApplicationContext(), "Někde je chyba", Toast.LENGTH_LONG).show();
+        }
+    }
 
 }

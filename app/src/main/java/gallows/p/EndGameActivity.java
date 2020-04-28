@@ -25,6 +25,7 @@ public class EndGameActivity extends AppCompatActivity {
     int winOrLose;
     String nameOfPlayer = "";
     String wantedWord = "";
+    boolean sound = true;
 
     private View decorView;
 
@@ -45,6 +46,8 @@ public class EndGameActivity extends AppCompatActivity {
         endScore = getIntent().getIntExtra("ID_VARIABLE", 0);
         wantedWord = getIntent().getStringExtra("WORD").toUpperCase();
         winOrLose = getIntent().getIntExtra("WIN_LOSS", 2);
+        sound = getIntent().getBooleanExtra("SOUND", true);
+
 
         showScore();
         loadAnimation();
@@ -54,8 +57,10 @@ public class EndGameActivity extends AppCompatActivity {
         AnimationDrawable anim = new AnimationDrawable();
         ImageView pcs = findViewById(R.id.endPlace);
         if (winOrLose == 0) {
-            MediaPlayer mp = MediaPlayer.create(this, R.raw.loosegame);
-            mp.start();
+            if (sound){
+                MediaPlayer mp = MediaPlayer.create(this, R.raw.loosegame);
+                mp.start();
+            }
             pcs.setImageResource(R.drawable.step10);
             try {
                 sleep(1000);
@@ -83,9 +88,10 @@ public class EndGameActivity extends AppCompatActivity {
 
 
         } else if (winOrLose == 1) {
-            MediaPlayer mp = MediaPlayer.create(this, R.raw.wingame);
-            mp.start();
-
+            if (sound) {
+                MediaPlayer mp = MediaPlayer.create(this, R.raw.wingame);
+                mp.start();
+            }
             pcs.setImageResource(R.drawable.won1);
             try {
                 sleep(1000);

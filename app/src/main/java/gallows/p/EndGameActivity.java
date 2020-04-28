@@ -80,15 +80,33 @@ public class EndGameActivity extends Activity {
             MediaPlayer mp = MediaPlayer.create(this, R.raw.wingame);
             mp.start();
 
-            anim.addFrame(getResources().getDrawable(R.drawable.v1), 1000);
-            anim.addFrame(getResources().getDrawable(R.drawable.v2), 1000);
-            anim.addFrame(getResources().getDrawable(R.drawable.v3), 1000);
-            anim.addFrame(getResources().getDrawable(R.drawable.v4), 1000);
-            anim.addFrame(getResources().getDrawable(R.drawable.v5), 1000);
-            anim.addFrame(getResources().getDrawable(R.drawable.v6), 1000);
-            anim.addFrame(getResources().getDrawable(R.drawable.v7), 1000);
-            pcs.setBackgroundDrawable(anim);
-            anim.start();
+            pcs.setImageResource(R.drawable.won1);
+            try {
+                sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } finally {
+                finish();
+            }
+
+            pcs.setImageResource(R.drawable.won2);
+            try {
+                sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } finally {
+                finish();
+            }
+
+            pcs.setImageResource(R.drawable.won3);
+            try {
+                sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } finally {
+                finish();
+            }
+
         } else {
             Toast.makeText(getApplicationContext(), "Opss, sorry somewhere is error", Toast.LENGTH_LONG).show();
         }

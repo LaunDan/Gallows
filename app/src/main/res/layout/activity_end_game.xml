@@ -88,7 +88,7 @@
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/endPlace"
         android:layout_width="286dp"
         android:layout_height="348dp"
         android:layout_marginBottom="72dp"

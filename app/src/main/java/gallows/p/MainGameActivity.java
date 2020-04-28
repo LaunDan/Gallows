@@ -32,7 +32,7 @@ public class MainGameActivity extends AppCompatActivity {
     private String suhadnute = "";
     private String countedMistake = "";
 
-    int topic = 0;
+    int topic = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +50,7 @@ public class MainGameActivity extends AppCompatActivity {
 
 
 
-        topic = getIntent().getIntExtra("ChosenMethod", 1);
+        topic = getIntent().getIntExtra("CHOSENMETHOD", 1);
 
         choseWord();
         edit(word);

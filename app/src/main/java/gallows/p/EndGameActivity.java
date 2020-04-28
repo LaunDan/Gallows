@@ -1,11 +1,15 @@
 package gallows.p;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.graphics.drawable.AnimationDrawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -120,5 +124,50 @@ public class EndGameActivity extends Activity {
         TextView tws = findViewById(R.id.score);
         tws.setText(String.valueOf(endScore));
     }
+
+    private void saveToTheMemory() {
+        SharedPreferences preferences = getSharedPreferences("RESULTS", MODE_PRIVATE);
+        String thisScore = preferences.getString("RESULTS", "");
+
+        SharedPreferences.Editor preeditor = preferences.edit();
+
+        preeditor.putString("RESULTS", thisScore + nameOfPlayer + ": " + endScore + "\n");
+        preeditor.apply();
+        finish();
+    }
+
+    public void saveScore(View v) {
+        EditText et = findViewById(R.id.name_eT);
+        nameOfPlayer = et.getText().toString();
+        if (!nameOfPlayer.contains("\n") && nameOfPlayer.length() >= 3) {
+            AlertDialog.Builder setdialog = new AlertDialog.Builder(this);
+            // creating AlertDialog builder
+            setdialog.setCancelable(true);
+            /* setCancelable set to act or not [true/false] on click out of dialog */
+            setdialog.setMessage("Do you want to save: " + nameOfPlayer + " ?");
+            /* setMessage set text of dialog */
+            setdialog.setPositiveButton("Yes",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            saveToTheMemory();
+                        }
+                    });
+            setdialog.setNegativeButton("No",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            Toast.makeText(getApplicationContext(), "Not saved", Toast.LENGTH_LONG).show();
+                            dialog.cancel();
+                        }
+                    });
+
+            AlertDialog startDialog = setdialog.create();
+            startDialog.show();
+
+        } else {
+            Toast.makeText(getApplicationContext(), "Name must have at least 3 characters..", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    
 
 }

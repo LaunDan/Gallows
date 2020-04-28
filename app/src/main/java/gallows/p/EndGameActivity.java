@@ -76,7 +76,7 @@ public class EndGameActivity extends Activity {
 
 
 
-        } else if (vyhraNeboProhra == 1) {
+        } else if (winOrLose == 1) {
             MediaPlayer mp = MediaPlayer.create(this, R.raw.wingame);
             mp.start();
 
@@ -87,10 +87,10 @@ public class EndGameActivity extends Activity {
             anim.addFrame(getResources().getDrawable(R.drawable.v5), 1000);
             anim.addFrame(getResources().getDrawable(R.drawable.v6), 1000);
             anim.addFrame(getResources().getDrawable(R.drawable.v7), 1000);
-            obr.setBackgroundDrawable(anim);
+            pcs.setBackgroundDrawable(anim);
             anim.start();
         } else {
-            Toast.makeText(getApplicationContext(), "Někde je chyba", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Opss, sorry somewhere is error", Toast.LENGTH_LONG).show();
         }
     }
 

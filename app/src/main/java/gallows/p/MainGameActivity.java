@@ -6,6 +6,7 @@ import android.content.pm.ActivityInfo;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -32,6 +33,8 @@ public class MainGameActivity extends AppCompatActivity {
     private String suhadnute = "";
     private String countedMistake = "";
 
+    private boolean sound = true;
+
     int topic = 1;
 
     @Override
@@ -49,8 +52,10 @@ public class MainGameActivity extends AppCompatActivity {
                 | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
 
 
-
         topic = getIntent().getIntExtra("CHOSENMETHOD", 1);
+
+        Button soundOff = findViewById(R.id.soundOff);
+        soundOff.setVisibility(View.GONE);
 
         choseWord();
         edit(word);
@@ -78,7 +83,7 @@ public class MainGameActivity extends AppCompatActivity {
         word = fieldInfo[losInfo];
     }
 
-    private void edit(String chosenWord){
+    private void edit(String chosenWord) {
         TextView[] letters = new TextView[10];
         letters[0] = findViewById(R.id.tvp1);
         letters[1] = findViewById(R.id.tvp2);
@@ -186,8 +191,10 @@ public class MainGameActivity extends AppCompatActivity {
 
     private void scorePlus(char letter) {
         if (suhadnute.indexOf(letter) == -1) {
-            MediaPlayer mp = MediaPlayer.create(this, R.raw.sucpis);
-            mp.start();
+            if (sound) {
+                MediaPlayer mp = MediaPlayer.create(this, R.raw.sucpis);
+                mp.start();
+            }
             suhadnute += letter;
             multiplikator++;
             score += (500 * multiplikator);
@@ -196,8 +203,10 @@ public class MainGameActivity extends AppCompatActivity {
 
     private void scoreMinus(char letter) {
         if (countedMistake.indexOf(letter) == -1) {
-            MediaPlayer mp = MediaPlayer.create(this, R.raw.failpis);
-            mp.start();
+            if (sound) {
+                MediaPlayer mp = MediaPlayer.create(this, R.raw.failpis);
+                mp.start();
+            }
             countedMistake += letter;
             score -= 1000;
             multiplikator = 0;
@@ -222,5 +231,25 @@ public class MainGameActivity extends AppCompatActivity {
         startActivity(endGame);
         finish();
     }
-}
 
+    public void soundSetterOn(View v) {
+        Button soundOn = findViewById(R.id.soundOn);
+        Button soundOff = findViewById(R.id.soundOff);
+
+        if (sound) {
+            soundOn.setVisibility(View.GONE);
+            soundOff.setVisibility(View.VISIBLE);
+            sound = false;
+        }
+    }
+    public void soundSetterOff(View v) {
+        Button soundOn = findViewById(R.id.soundOn);
+        Button soundOff = findViewById(R.id.soundOff);
+
+        if (!sound) {
+            soundOn.setVisibility(View.VISIBLE);
+            soundOff.setVisibility(View.GONE);
+            sound = true;
+        }
+    }
+}

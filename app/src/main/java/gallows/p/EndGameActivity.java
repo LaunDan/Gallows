@@ -54,7 +54,7 @@ public class EndGameActivity extends AppCompatActivity {
     }
 
     private void loadAnimation() {
-        AnimationDrawable anim = new AnimationDrawable();
+
         ImageView pcs = findViewById(R.id.endPlace);
         if (winOrLose == 0) {
             if (sound){
@@ -66,24 +66,20 @@ public class EndGameActivity extends AppCompatActivity {
                 sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
-            } finally {
-                finish();
             }
+
             pcs.setImageResource(R.drawable.step11);
             try {
                 sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
-            } finally {
-                finish();
             }
+
             pcs.setImageResource(R.drawable.step12);
             try {
                 sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
-            } finally {
-                finish();
             }
 
 
@@ -97,8 +93,6 @@ public class EndGameActivity extends AppCompatActivity {
                 sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
-            } finally {
-                finish();
             }
 
             pcs.setImageResource(R.drawable.won2);
@@ -106,8 +100,6 @@ public class EndGameActivity extends AppCompatActivity {
                 sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
-            } finally {
-                finish();
             }
 
             pcs.setImageResource(R.drawable.won3);
@@ -115,8 +107,6 @@ public class EndGameActivity extends AppCompatActivity {
                 sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
-            } finally {
-                finish();
             }
 
         } else {

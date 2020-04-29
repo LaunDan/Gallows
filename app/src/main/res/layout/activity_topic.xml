@@ -107,7 +107,8 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/buttonshape"
                 android:onClick="play"
-                android:text="Play" />
+                android:text="Play"
+                android:textColor="@color/colorBlack"/>
         </TableRow>
 
     </LinearLayout>

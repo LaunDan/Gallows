@@ -12,7 +12,7 @@
         android:id="@+id/placeForGallows"
         android:layout_width="260dp"
         android:layout_height="280dp"
-        android:layout_marginTop="190dp"
+        android:layout_marginTop="220dp"
         android:background="@drawable/step1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -131,7 +131,7 @@
         </TableRow>
 
         <TableRow
-            android:layout_width="338dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center_horizontal">
 
@@ -141,7 +141,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:text="Enter:"
-                android:textSize="40dp" />
+                android:textSize="30dp" />
 
             <Space
                 android:layout_width="10dp"
@@ -149,7 +149,7 @@
 
             <EditText
                 android:id="@+id/entered"
-                android:layout_width="50dp"
+                android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|center_horizontal"
                 android:inputType="text"
@@ -162,7 +162,7 @@
             <Button
                 android:id="@+id/insert"
                 android:layout_width="156dp"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
                 android:layout_gravity="center_vertical"
                 android:background="@drawable/buttonshape"
                 android:onClick="insert"

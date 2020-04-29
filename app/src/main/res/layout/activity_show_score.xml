@@ -37,7 +37,7 @@
     </TableRow>
 
     <ScrollView
-        android:layout_width="300dp"
+        android:layout_width="wrap_content"
         android:layout_height="400dp"
         android:layout_marginTop="75dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,7 +47,7 @@
 
         <TextView
             android:id="@+id/listOfPlayers"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="TextView"
             android:textSize="30dp"

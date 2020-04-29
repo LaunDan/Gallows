@@ -31,14 +31,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Choose topic"
-                android:textSize="40dp"
+                android:textSize="55dp"
                 android:textStyle="bold"
                 android:textColor="@color/colorBlack"/>
         </TableRow>
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="100dp" />
+            android:layout_height="50dp" />
 
         <RadioGroup
             android:id="@+id/radioGroup"
@@ -52,7 +52,7 @@
                 android:layout_height="wrap_content"
                 android:checked="true"
                 android:text="Towns"
-                android:textSize="30dp"
+                android:textSize="40dp"
                 android:textColor="@color/colorBlack"/>
 
             <Space
@@ -64,7 +64,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="States"
-                android:textSize="30dp"
+                android:textSize="40dp"
                 android:textColor="@color/colorBlack"/>
 
             <Space
@@ -76,7 +76,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Animals"
-                android:textSize="30dp"
+                android:textSize="40dp"
                 android:textColor="@color/colorBlack"/>
 
             <Space
@@ -88,13 +88,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Cars"
-                android:textSize="30dp"
+                android:textSize="40dp"
                 android:textColor="@color/colorBlack"/>
         </RadioGroup>
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="130dp" />
+            android:layout_height="100dp" />
 
         <TableRow
             android:layout_width="wrap_content"

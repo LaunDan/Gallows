@@ -112,9 +112,9 @@ public class MainGameActivity extends AppCompatActivity {
             if ((enteredP >= 97 && enteredP <= 122) || (enteredP == 283) || (enteredP == 353) || (enteredP == 357) || (enteredP == 269) || (enteredP == 345) || (enteredP == 382) || (enteredP == 253) || (enteredP == 225) || (enteredP == 237) || (enteredP == 233) || (enteredP == 367) || (enteredP == 250) || (enteredP == 243)) {
 
                 for (int i = 0; i < word.length(); i++) {
-                    if (word.charAt(i) == enteredP) {
+                    if (word.toLowerCase().charAt(i) == enteredP) {
                         amountOfExistence++;
-                        writeCorrect(enteredP, i);
+                        writeCorrect(word.charAt(i), i);
                         scorePlus(enteredP);
                     }
                 }

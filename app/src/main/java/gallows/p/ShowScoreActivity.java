@@ -59,4 +59,8 @@ public class ShowScoreActivity extends Activity {
         AlertDialog startDialog = nasDialog.create();
         startDialog.show();
     }
+
+    public void end(View v){
+        finish();
+    }
 }

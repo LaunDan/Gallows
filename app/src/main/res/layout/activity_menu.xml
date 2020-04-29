@@ -43,7 +43,8 @@
                     android:layout_height="wrap_content"
                     android:onClick="startPlay"
                     android:background="@drawable/buttonshape"
-                    android:text="Play" />
+                    android:text="Play"
+                    android:textColor="@color/colorBlack"/>
             </TableRow>
 
             <Space
@@ -61,7 +62,8 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/buttonshape"
                     android:onClick="printScore"
-                    android:text="results" />
+                    android:text="results"
+                    android:textColor="@color/colorBlack"/>
             </TableRow>
 
             <Space
@@ -79,7 +81,8 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/buttonshape"
                     android:onClick="end"
-                    android:text="end" />
+                    android:text="end"
+                    android:textColor="@color/colorBlack"/>
             </TableRow>
 
         </LinearLayout>

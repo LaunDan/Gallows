@@ -64,70 +64,80 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="_"
-                android:textSize="50dp" />
+                android:textSize="50dp"
+                android:textColor="@color/colorBlack"/>
 
             <TextView
                 android:id="@+id/tvp2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="_"
-                android:textSize="50dp" />
+                android:textSize="50dp"
+                android:textColor="@color/colorBlack"/>
 
             <TextView
                 android:id="@+id/tvp3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="_"
-                android:textSize="50dp" />
+                android:textSize="50dp"
+                android:textColor="@color/colorBlack"/>
 
             <TextView
                 android:id="@+id/tvp4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="_"
-                android:textSize="50dp" />
+                android:textSize="50dp"
+                android:textColor="@color/colorBlack"/>
 
             <TextView
                 android:id="@+id/tvp5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="_"
-                android:textSize="50dp" />
+                android:textSize="50dp"
+                android:textColor="@color/colorBlack"/>
 
             <TextView
                 android:id="@+id/tvp6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="_"
-                android:textSize="50dp" />
+                android:textSize="50dp"
+                android:textColor="@color/colorBlack"/>
 
             <TextView
                 android:id="@+id/tvp7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="_"
-                android:textSize="50dp" />
+                android:textSize="50dp"
+                android:textColor="@color/colorBlack"/>
 
             <TextView
                 android:id="@+id/tvp8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="_"
-                android:textSize="50dp" />
+                android:textSize="50dp"
+                android:textColor="@color/colorBlack"/>
 
             <TextView
                 android:id="@+id/tvp9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="_"
-                android:textSize="50dp" />
+                android:textSize="50dp"
+                android:textColor="@color/colorBlack"/>
 
             <TextView
                 android:id="@+id/tvp10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="_"
-                android:textSize="50dp" />
+                android:textSize="50dp"
+                android:textColor="@color/colorBlack"/>
         </TableRow>
 
         <TableRow
@@ -141,7 +151,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:text="Enter:"
-                android:textSize="30dp" />
+                android:textSize="30dp"
+                android:textColor="@color/colorBlack"/>
 
             <Space
                 android:layout_width="10dp"
@@ -153,7 +164,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|center_horizontal"
                 android:inputType="text"
-                android:textSize="40dp"/>
+                android:textSize="40dp"
+                android:textColor="@color/colorBlack"
+                />
 
             <Space
                 android:layout_width="16dp"
@@ -166,7 +179,8 @@
                 android:layout_gravity="center_vertical"
                 android:background="@drawable/buttonshape"
                 android:onClick="insert"
-                android:text="Try" />
+                android:text="Try"
+                android:textColor="@color/colorBlack"/>
         </TableRow>
     </FrameLayout>
 

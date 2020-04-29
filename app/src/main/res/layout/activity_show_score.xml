@@ -21,7 +21,8 @@
             android:layout_height="wrap_content"
             android:background="@drawable/buttonshape"
             android:onClick="deleteOfMemory"
-            android:text="Delete" />
+            android:text="Delete"
+            android:textColor="@color/colorBlack"/>
 
         <Space
             android:layout_width="30dp"
@@ -33,7 +34,8 @@
             android:layout_height="wrap_content"
             android:background="@drawable/buttonshape"
             android:onClick="end"
-            android:text="Back" />
+            android:text="Back"
+            android:textColor="@color/colorBlack"/>
     </TableRow>
 
     <ScrollView
@@ -50,7 +52,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="TextView"
-            android:textSize="30dp"
-            android:gravity="center_horizontal"/>
+            android:textStyle="bold"
+            android:textSize="40dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorBlack"/>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

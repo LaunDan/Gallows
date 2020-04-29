@@ -183,6 +183,7 @@ public class MainGameActivity extends AppCompatActivity {
             } else if (mistakes == 8) {
                 place.setImageResource(R.drawable.step9);
             } else if (mistakes == 9) {
+                place.setImageResource(R.drawable.step10);
                 endOfGame();
             }
 

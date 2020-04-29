@@ -1,11 +1,10 @@
 package gallows.p;
 
-import android.app.Activity;
+
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
-import android.graphics.drawable.AnimationDrawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -16,7 +15,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import static java.lang.Thread.sleep;
+
 
 
 public class EndGameActivity extends AppCompatActivity {
@@ -26,7 +25,7 @@ public class EndGameActivity extends AppCompatActivity {
     String nameOfPlayer = "";
     String wantedWord = "";
     boolean sound = true;
-    int animLoad = 0;
+
 
     private View decorView;
 
@@ -52,75 +51,24 @@ public class EndGameActivity extends AppCompatActivity {
 
         showScore();
         loadAnimation();
-        loadAnimation();
-        loadAnimation();
-
     }
-//TODO set animation to print one by one
+
     private void loadAnimation() {
 
         ImageView pcs = findViewById(R.id.endPlace);
         if (winOrLose == 0) {
-            if (animLoad == 0) {
-                if (sound) {
-                    MediaPlayer mp = MediaPlayer.create(this, R.raw.loosegame);
-                    mp.start();
-                }
-                pcs.setImageResource(R.drawable.step10);
-                animLoad++;
-                try {
-                    sleep(1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            } else if (animLoad == 1) {
-                pcs.setImageResource(R.drawable.step11);
-                animLoad++;
-                try {
-                    sleep(1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            } else if (animLoad == 2) {
-                animLoad++;
-                pcs.setImageResource(R.drawable.step12);
-                try {
-                    sleep(1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+            if (sound) {
+                MediaPlayer mp = MediaPlayer.create(this, R.raw.loosegame);
+                mp.start();
             }
-
-
-
+            pcs.setImageResource(R.drawable.step12);
 
         } else if (winOrLose == 1) {
-
-            pcs.setImageResource(R.drawable.won1);
-            try {
-                sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-
-            pcs.setImageResource(R.drawable.won2);
-            try {
-                sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-
             pcs.setImageResource(R.drawable.won3);
-            try {
-                sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
             if (sound) {
                 MediaPlayer mp = MediaPlayer.create(this, R.raw.wingame);
                 mp.start();
             }
-
         } else {
             Toast.makeText(getApplicationContext(), "Opss, sorry somewhere is error", Toast.LENGTH_LONG).show();
         }

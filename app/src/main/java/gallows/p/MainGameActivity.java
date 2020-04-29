@@ -58,19 +58,24 @@ public class MainGameActivity extends AppCompatActivity {
 
     private void choseWord() {
         String[] fieldInfo = new String[100];
+         TextView nameOfTopic = findViewById(R.id.nameOfTopic);
         int lenghtInfo = 0;
 
         if (topic == 1) {
             fieldInfo = new String[]{"Prague", "Washington", "Bratislava", "Hongkong", "Tokyo", "Berlin", "Warsaw", "Vienna", "Paris", "Brussels", "Minsk", "Brasilia", "Sofia", "Peking", "Copenhagen", "Helsinki", "Dublin", "Roma", "Jerusalem", "Ottawa", "Havana", "Luxembourg", "Budapest", "Amsterdam", "Oslo", "Lisbon", "Moscow", "Athens", "London", "Madrid", "Bangkok"};
+            nameOfTopic.setText("Towns");
         }
         if (topic == 2) {
             fieldInfo = new String[]{"Czechia", "Slovakia", "Germany", "Poland", "Austria", "Australia", "England", "Holland", "China", "Japan", "Russia", "Vietnam", "Italy", "Canada", "Brazil", "India", "Greece", "Croatia", "France", "Ukraine", "Turkey", "Sweden", "Finland", "Norway", "Spain"};
+            nameOfTopic.setText("States");
         }
         if (topic == 3) {
             fieldInfo = new String[]{"kangaroo", "monkey", "ribs", "lama", "elephant", "camel", "rhinoceros", "pheasant", "bear", "hen", "sheep", "pig", "goat", "cow", "rooster", "rabbit", "hare", "tiger", "wolf", "squirrel", "frog", "seal", "hedgehog", "ferret", "hamster", "horse", "dog", "cat", "giraffe", "fox", "snake"};
+            nameOfTopic.setText("Animals");
         }
         if (topic == 4) {
             fieldInfo = new String[]{"audi", "bmw", "citroen", "dacia", "fiat", "ferrari", "kia", "honda", "škoda", "hyundai", "chevrolet", "jaguar", "jeep", "mazda", "mercedes", "mitsubishi", "nissan", "opel", "peugeot", "porsche", "renault", "rover", "saab", "seat", "subaru", "suzuki", "toyota", "volkswagen", "volvo", "bentley", "bugatti", "cadillac", "lada", "dodge", "infinity", "lancia", "lexus", "maybach", "pagani", "proton", "tatra"};
+            nameOfTopic.setText("Cars");
         }
         lenghtInfo = fieldInfo.length;
         Random ranInfo = new Random();
@@ -80,7 +85,7 @@ public class MainGameActivity extends AppCompatActivity {
 
     private void edit(String chosenWord) {
         TextView[] letters = new TextView[10];
-        letters[0] = findViewById(R.id.tvp1);
+        letters[0] =
         letters[1] = findViewById(R.id.tvp2);
         letters[2] = findViewById(R.id.tvp3);
         letters[3] = findViewById(R.id.tvp4);

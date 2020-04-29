@@ -28,11 +28,13 @@ public class MenuActivity extends AppCompatActivity {
         public void startPlay (View v){
             Intent newActivity = new Intent(this, TopicActivity.class);
             startActivity(newActivity);
+
         }
 
         public void printScore (View v){
             Intent newActivity = new Intent(this, ShowScoreActivity.class);
             startActivity(newActivity);
+
         }
 
         public void end (View v){

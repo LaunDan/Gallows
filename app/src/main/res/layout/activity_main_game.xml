@@ -35,7 +35,7 @@
     <TextView
         android:id="@+id/mistakes"
         android:layout_width="0dp"
-        android:layout_height="24dp"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:gravity="center_horizontal"
         android:textColor="#edff0000"
@@ -61,70 +61,70 @@
 
             <TextView
                 android:id="@+id/tvp1"
-                android:layout_width="30dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="_"
                 android:textSize="50dp" />
 
             <TextView
                 android:id="@+id/tvp2"
-                android:layout_width="30dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="_"
                 android:textSize="50dp" />
 
             <TextView
                 android:id="@+id/tvp3"
-                android:layout_width="30dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="_"
                 android:textSize="50dp" />
 
             <TextView
                 android:id="@+id/tvp4"
-                android:layout_width="30dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="_"
                 android:textSize="50dp" />
 
             <TextView
                 android:id="@+id/tvp5"
-                android:layout_width="30dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="_"
                 android:textSize="50dp" />
 
             <TextView
                 android:id="@+id/tvp6"
-                android:layout_width="30dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="_"
                 android:textSize="50dp" />
 
             <TextView
                 android:id="@+id/tvp7"
-                android:layout_width="30dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="_"
                 android:textSize="50dp" />
 
             <TextView
                 android:id="@+id/tvp8"
-                android:layout_width="30dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="_"
                 android:textSize="50dp" />
 
             <TextView
                 android:id="@+id/tvp9"
-                android:layout_width="30dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="_"
                 android:textSize="50dp" />
 
             <TextView
                 android:id="@+id/tvp10"
-                android:layout_width="30dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="_"
                 android:textSize="50dp" />
@@ -152,7 +152,8 @@
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|center_horizontal"
-                android:inputType="text" />
+                android:inputType="text"
+                android:textSize="40dp"/>
 
             <Space
                 android:layout_width="16dp"

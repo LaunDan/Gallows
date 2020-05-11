@@ -61,3 +61,4 @@ public class ShowScoreActivity extends Activity {
         finish();
     }
 }
+//TODO edit view of score list

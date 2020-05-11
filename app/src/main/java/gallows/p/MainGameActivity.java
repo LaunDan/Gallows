@@ -60,7 +60,7 @@ public class MainGameActivity extends AppCompatActivity {
         String[] fieldInfo = new String[100];
          TextView nameOfTopic = findViewById(R.id.nameOfTopic);
         int lenghtInfo = 0;
-
+//TODO add new topic and new words
         if (topic == 1) {
             fieldInfo = new String[]{"Prague", "Washington", "Bratislava", "Hongkong", "Tokyo", "Berlin", "Warsaw", "Vienna", "Paris", "Brussels", "Minsk", "Brasilia", "Sofia", "Peking", "Copenhagen", "Helsinki", "Dublin", "Roma", "Jerusalem", "Ottawa", "Havana", "Luxembourg", "Budapest", "Amsterdam", "Oslo", "Lisbon", "Moscow", "Athens", "London", "Madrid", "Bangkok"};
             nameOfTopic.setText("Towns");

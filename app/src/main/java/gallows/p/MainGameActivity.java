@@ -43,10 +43,6 @@ public class MainGameActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main_game);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR);
-
-
-
-
         topic = getIntent().getIntExtra("CHOSENMETHOD", 1);
 
         Button soundOff = findViewById(R.id.soundOff);

@@ -21,7 +21,7 @@ import java.util.Random;
 
 public class MainGameActivity extends AppCompatActivity {
 
-    // todo make apk and realise this app
+    // todo add ads
     private String word = "";
     private int mistakes = 0;
 

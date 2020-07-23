@@ -31,7 +31,7 @@ public class MainGameActivity extends AppCompatActivity {
 
     private int score = 10000;
     private int multiplikator = 0;
-    private String suhadnute = "";
+    private String wordFinded = "";
     private String countedMistake = "";
 
     private boolean sound = true;
@@ -188,12 +188,12 @@ public class MainGameActivity extends AppCompatActivity {
     }
 
     private void scorePlus(char letter) {
-        if (suhadnute.indexOf(letter) == -1) {
+        if (wordFinded.indexOf(letter) == -1) {
             if (sound) {
                 MediaPlayer mp = MediaPlayer.create(this, R.raw.sucpis);
                 mp.start();
             }
-            suhadnute += letter;
+            wordFinded += letter;
             multiplikator++;
             score += (500 * multiplikator);
         }

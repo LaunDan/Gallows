@@ -16,7 +16,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-
 import java.util.Random;
 
 public class MainGameActivity extends AppCompatActivity {
@@ -55,7 +54,7 @@ public class MainGameActivity extends AppCompatActivity {
 
     private void choseWord() {
         String[] fieldInfo = new String[100];
-         TextView nameOfTopic = findViewById(R.id.nameOfTopic);
+        TextView nameOfTopic = findViewById(R.id.nameOfTopic);
         int lenghtInfo = 0;
 //TODO add new topic and new words
         if (topic == 1) {
@@ -83,7 +82,7 @@ public class MainGameActivity extends AppCompatActivity {
     private void edit(String chosenWord) {
         TextView[] letters = new TextView[10];
         letters[0] =
-        letters[1] = findViewById(R.id.tvp2);
+                letters[1] = findViewById(R.id.tvp2);
         letters[2] = findViewById(R.id.tvp3);
         letters[3] = findViewById(R.id.tvp4);
         letters[4] = findViewById(R.id.tvp5);
@@ -242,6 +241,7 @@ public class MainGameActivity extends AppCompatActivity {
             sound = false;
         }
     }
+
     public void soundSetterOff(View v) {
         Button soundOn = findViewById(R.id.soundOn);
         Button soundOff = findViewById(R.id.soundOff);

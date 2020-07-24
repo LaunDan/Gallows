@@ -24,7 +24,6 @@ public class WelcomeActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR);
 
 
-
         ImageView imgvwSpsoa2 = findViewById(R.id.imageView2);
         Animation animSpsoaLogo2 = AnimationUtils.loadAnimation(this, R.anim.welcome_sc);
         ImageView imgvwSpsoa1 = findViewById(R.id.imageView);
@@ -46,12 +45,12 @@ public class WelcomeActivity extends AppCompatActivity {
         thrdWlcmscrnDelay.start();
     }
 
-    private void startAct(){
+    private void startAct() {
         startActivity(new Intent(getApplicationContext(), MenuActivity.class));
         finish();
     }
 
-    public void startOnClick(View v){
+    public void startOnClick(View v) {
         actStarted = true;
         startAct();
     }

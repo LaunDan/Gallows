@@ -23,8 +23,6 @@ public class TopicActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR);
 
 
-
-
     }
 
     public void play(View v) {

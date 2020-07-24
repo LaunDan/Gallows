@@ -17,8 +17,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-
-
 public class EndGameActivity extends AppCompatActivity {
 
     int endScore;
@@ -28,7 +26,6 @@ public class EndGameActivity extends AppCompatActivity {
     boolean sound = true;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +33,6 @@ public class EndGameActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_end_game);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR);
-
 
 
         endScore = getIntent().getIntExtra("ID_VARIABLE", 0);

@@ -1,12 +1,12 @@
 package gallows.p;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MenuActivity extends AppCompatActivity {
     private View decorView;
@@ -19,23 +19,22 @@ public class MenuActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR);
 
 
+    }
+
+    public void startPlay(View v) {
+        Intent newActivity = new Intent(this, TopicActivity.class);
+        startActivity(newActivity);
 
     }
 
-        public void startPlay (View v){
-            Intent newActivity = new Intent(this, TopicActivity.class);
-            startActivity(newActivity);
+    public void printScore(View v) {
+        Intent newActivity = new Intent(this, ShowScoreActivity.class);
+        startActivity(newActivity);
 
-        }
+    }
 
-        public void printScore (View v){
-            Intent newActivity = new Intent(this, ShowScoreActivity.class);
-            startActivity(newActivity);
-
-        }
-
-        public void end (View v){
-            finish();
-        }
+    public void end(View v) {
+        finish();
+    }
 
 }

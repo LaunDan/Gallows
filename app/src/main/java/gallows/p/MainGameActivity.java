@@ -20,6 +20,7 @@ import java.util.Random;
 
 public class MainGameActivity extends AppCompatActivity {
 
+    // todo give chance to play one more time for video add
     // todo add ads
     private String word = "";
     private int mistakes = 0;

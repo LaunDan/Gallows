@@ -26,7 +26,7 @@ public class EndGameActivity extends AppCompatActivity {
     boolean sound = true;
 
     // todo make ,,play again" button
-    // todo 
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

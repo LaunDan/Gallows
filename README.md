@@ -1,3 +1,2 @@
 # Gallows
-Gallows game
-My first finished game for android
+Gallows game! Can you guess which word is hidden? 

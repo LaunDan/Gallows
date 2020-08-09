@@ -22,6 +22,8 @@ public class MainGameActivity extends AppCompatActivity {
 
     // todo give chance to play one more time for video add
     // todo add ads
+    // todo make prettier icon of this app
+
     private String word = "";
     private int mistakes = 0;
 
